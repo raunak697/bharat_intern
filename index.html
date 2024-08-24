@@ -2,24 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
     <link rel="stylesheet" href="style.css">
-    <title>Stopwatch</title>
 </head>
 <body>
-    <div class="stopwatch">
-        <div class="timerDisplay">00 : 00 : 00</div>
+    <div class="todo-container">
+        <h1>To-Do-List</h1>
+        <input type="text" id="new-task" placeholder="Add a new task...">
+        <button id="add-task-btn">Add</button>
+        <ul id="task-list"></ul>
     </div>
-
-    <div class="buttons">
-        <button id="stopBtn" class="btn" style="--clr:red;">Stop</button>
-
-        <button id="startBtn" class="btn" style="--clr:green">Start</button>
-
-        <button id="resetBtn" class="btn" style="--clr:blue">Reset</button>
-    </div>
-
-    <script src="app.js"></script>
+    <script>
+        const addTaskBtn = document.getElementById('add-task-btn');
+        const taskList = document.getElementById('task-list');
+        addTaskBtn.addEventListener('click',()=>{
+            const taskText = document.getElementById('new-task').value;
+            if(taskText==="")return;
+            const taskItem=document.createElement('li');
+            taskItem.innerHTML = `<span>${taskText}</span>
+            <button class="edit-btn">Edit</button>
+            <button class="complete-btn">Complete</button>
+            <button class="delete-btn">Delete</button>`;
+            taskList.appendChild(taskItem);
+            document.getElementById('new-task').value="";
+            taskItem.querySelector('.edit-btn').addEventListener('click',()=>{
+                const newText = prompt("Edit task:",taskText);
+                if(newText)taskItem.querySelector('span').textContent= newText;
+            });
+            taskItem.querySelector('.complete-btn').addEventListener('click',()=>{
+                taskItem.querySelector('span').classListtoggle('completed');
+            });
+            taskItem.querySelector('.delete-btn').addEventListener('click',()=>{
+                taskList.removeChild(taskItem);
+            });
+        });
+    </script>
 </body>
 </html>
