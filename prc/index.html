@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { max-width: 500px; margin: auto; }
+        label { display: block; margin: 10px 0 5px; }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        select,
+        textarea { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        input[type="submit"] { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Student Admission Form</h1>
+    <form action="#" method="post">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <label for="stream">Chosen Stream</label>
+        <select id="stream" name="stream" required>
+            <option value="" disabled selected>Select your stream</option>
+            <option value="science">Science</option>
+            <option value="arts">Arts</option>
+            <option value="commerce">Commerce</option>
+            <option value="engineering">Engineering</option>
+        </select>
+        <label for="guardianName">Guardian's Name</label>
+        <input type="text" id="guardianName" name="guardianName" required>
+
+        <label for="guardianPhone">Guardian's Phone Number</label>
+        <input type="tel" id="guardianPhone" name="guardianPhone" required>
+
+        <label for="previousSchool">Previous School</label>
+        <input type="text" id="previousSchool" name="previousSchool" required>
+
+        <label for="percentage">Percentage in Last Exam</label>
+        <input type="text" id="percentage" name="percentage" required>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
