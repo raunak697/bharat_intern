@@ -1,0 +1,82 @@
+/* import React from 'react';
+import './profile.css'; // You can create a CSS file for styling
+
+const ProfileCard = ({ name, age, location }) => {
+    return (
+        <div className="profile-card">
+            <h2>{name}</h2>
+            <p>Age: {age}</p>
+            <p>Location: {location}</p>
+        </div>
+    );
+};
+
+export default ProfileCard; */
+/* import React, { useState } from 'react';
+
+const Counter = () => {
+    const [count, setCount] = useState(0);
+
+    const increment = () => setCount(count + 1);
+    const decrement = () => setCount(count - 1);
+
+    return (
+        <div>
+            <h1>Count: {count}</h1>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
+        </div>
+    );
+};
+
+export default Counter; */
+
+/* import React, { useState } from 'react';
+
+const LikeButton = ({ likeCount }) => {
+    const [count, setCount] = useState(likeCount);
+
+    const handleLike = () => {
+        setCount(count + 1);
+    };
+
+    return (
+        <div>
+            <button onClick={handleLike}>Like</button>
+            <p>{count} {count === 1 ? 'Like' : 'Likes'}</p>
+        </div>
+    );
+};
+
+export default LikeButton; */
+
+/* import React from 'react';
+
+const ColorPicker = ({ selectedColor, onColorChange }) => {
+  const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
+
+  return (
+    <div>
+      <h3>Select a Color:</h3>
+      <div style={{ display: 'flex', gap: '10px' }}>
+        {colors.map(color => (
+          <div
+            key={color}
+            onClick={() => onColorChange(color)}
+            style={{
+              width: '40px',
+              height: '40px',
+              backgroundColor: color,
+              border: selectedColor === color ? '2px solid black' : 'none',
+              cursor: 'pointer',
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ColorPicker; */
+
+
