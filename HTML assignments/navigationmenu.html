@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Navigation Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Navigation bar styles */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        /* Clear floats */
+        nav::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h1>Home Section</h1>
+    <p>Welcome to our website!</p>
+</section>
+
+<section id="about">
+    <h1>About Section</h1>
+    <p>Learn more about us.</p>
+</section>
+
+<section id="services">
+    <h1>Services Section</h1>
+    <p>Check out our services.</p>
+</section>
+
+<section id="contact">
+    <h1>Contact Section</h1>
+    <p>Get in touch with us!</p>
+</section>
+
+</body>
+</html>
